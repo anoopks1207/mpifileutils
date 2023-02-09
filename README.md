@@ -30,3 +30,6 @@ Following sbatch samples can be used as a reference to trigger job runs from slu
 
 **dsync.sbatch** - Sync the source and destination file system.
 
+
+
+### For detailed documentation, please refer ### [ https://mpifileutils.readthedocs.io/en/v0.11.1/index.html ]
