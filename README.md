@@ -35,13 +35,15 @@ dtar - Create and extract tape archive files.
 dwalk - List, sort, and profile files.
 
 Following sbatch samples can be used as a reference to trigger job runs from slurm.
-```
-**dwalk.sbatch** - Scan the source file system and dump output to a file.
 
-**dcp.sbatch** - Copy all files/folder to another file system.
-
-**dsync.sbatch** - Sync the source and destination file system.
 ```
+dwalk.sbatch - Scan the source file system and dump output to a file.
+
+dcp.sbatch - Copy all files/folder to another file system.
+
+dsync.sbatch - Sync the source and destination file system.
+```
+
   - For large directory trees, the --batch-files option offers a type of checkpoint. 
     It moves files in batches, and if interrupted, a restart picks up from the last completed batch.:
 
