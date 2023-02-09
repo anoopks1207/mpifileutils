@@ -30,6 +30,7 @@ Following sbatch samples can be used as a reference to trigger job runs from slu
 
 **dsync.sbatch** - Sync the source and destination file system.
 
+    - For large directory trees, the --batch-files option offers a type of checkpoint. It moves files in batches, and if interrupted, a restart picks up from the last completed batch.:
 
 
 **For detailed documentation, please refer** [ https://mpifileutils.readthedocs.io/en/v0.11.1/index.html ]
