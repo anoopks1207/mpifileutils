@@ -15,24 +15,33 @@ dbz2 - Compress and decompress a file with bz2.
 dchmod - Change owner, group, and permissions on files.
 
 dcmp - Compare contents between directories or files.
+
 dcp - Copy files.
+
 ddup - Find duplicate files.
+
 dfind - Filter files.
+
 dreln - Update symlinks to point to a new path.
+
 drm - Remove files.
+
 dstripe - Restripe files (Lustre).
+
 dsync - Synchronize source and destination directories or files.
+
 dtar - Create and extract tape archive files.
+
 dwalk - List, sort, and profile files.
 
 Following sbatch samples can be used as a reference to trigger job runs from slurm.
-
+```
 **dwalk.sbatch** - Scan the source file system and dump output to a file.
 
 **dcp.sbatch** - Copy all files/folder to another file system.
 
 **dsync.sbatch** - Sync the source and destination file system.
-
+```
   - For large directory trees, the --batch-files option offers a type of checkpoint. 
     It moves files in batches, and if interrupted, a restart picks up from the last completed batch.:
 
