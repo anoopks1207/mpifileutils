@@ -19,4 +19,4 @@ sed -i "s/$/:${SLURM_NTASKS_PER_NODE}/" $MACHINEFILE
 
 cat $MACHINEFILE
 # Run using generated Machine file:
-dsync --batch-files 1000 /nfs/cluster/folder1 /nfs/cluster/folder5
+dsync --batch-files 10000 /source/to/sync /dest/to/sync
