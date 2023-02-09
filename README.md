@@ -34,6 +34,10 @@ dtar - Create and extract tape archive files.
 
 dwalk - List, sort, and profile files.
 
+## Installation
+
+Run install.sh with out any arguments. This will compile and install mpifileutils with all required dependencies.
+
 ### Following sbatch samples can be used as a reference to trigger job runs from slurm.
 
 ```
