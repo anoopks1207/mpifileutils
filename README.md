@@ -34,7 +34,7 @@ dtar - Create and extract tape archive files.
 
 dwalk - List, sort, and profile files.
 
-Following sbatch samples can be used as a reference to trigger job runs from slurm.
+## Following sbatch samples can be used as a reference to trigger job runs from slurm.
 
 ```
 dwalk.sbatch - Scan the source file system and dump output to a file.
