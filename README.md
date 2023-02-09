@@ -6,7 +6,9 @@ The mpiFileUtils suite solves this problem by offering MPI-based tools for basic
 
 
 
-dwalk.sbatch - Scan the source file system and dump output to a file
-dcp.sbatch - Copy all files/folder to another file system
-dsync.sbatch - Sync the source and destination file system
+**dwalk.sbatch** - Scan the source file system and dump output to a file.
+
+**dcp.sbatch** - Copy all files/folder to another file system.
+
+**dsync.sbatch** - Sync the source and destination file system.
 
