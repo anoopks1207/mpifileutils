@@ -55,3 +55,7 @@ dsync.sbatch - Sync the source and destination file system.
 
 
 **For detailed documentation, please refer** [ https://mpifileutils.readthedocs.io/en/v0.11.1/index.html ]
+
+## KNOWN BUGS
+
+The maximum supported file name length for any file transferred is approximately 4068 characters
