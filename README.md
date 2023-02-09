@@ -41,10 +41,10 @@ dwalk.sbatch - Scan the source file system and dump output to a file.
 
 dcp.sbatch - Copy all files/folder to another file system.
 
-dsync.sbatch - Sync the source and destination file system.
+dsync.sbatch - Sync the source and destination file system.[^1]
 ```
 
-  - For large directory trees, the --batch-files option offers a type of checkpoint. 
+  [^1]: For large directory trees, the --batch-files option offers a type of checkpoint. 
     It moves files in batches, and if interrupted, a restart picks up from the last completed batch.:
 
 
