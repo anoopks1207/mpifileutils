@@ -44,9 +44,27 @@ Run **install.sh** with out any arguments. This will compile and install mpifile
 
 ```
 dwalk.sbatch - Scan the source file system and dump output to a file.
+```
+The default file format is a binary file intended for use in other tools, not humans, but one can ask for a text-based output:
 
+**dwalk --text --output list.txt /path/to/walk**
+
+The text-based output is lossy, and it cannot be read back in to a tool. If you want both, save to binary format first, then read the binary file to convert it to text.
+
+**dwalk --output list.mfu /path/to/walk
+dwalk --input list.mfu --text --output list.txt**
+
+```
 dcp.sbatch - Copy all files/folder to another file system.
 
+```
+--bufsize SIZE
+Set the I/O buffer to be SIZE bytes. Units like "MB" and "GB" may immediately follow the number without spaces (e.g. 8MB). The default bufsize is 4MB.
+
+--chunksize SIZE
+Multiple processes copy a large file in parallel by dividing it into chunks. Set chunk to be at minimum SIZE bytes. Units like "MB" and "GB" can immediately follow the number without spaces (e.g. 64MB). The default chunksize is 4MB.
+
+```
 dsync.sbatch - Sync the source and destination file system.
 ```
 
