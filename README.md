@@ -58,17 +58,15 @@ dwalk.sbatch - Scan the source file system and dump output to a file.
 dcp.sbatch - Copy all files/folder to another file system.
 
 ```
---bufsize SIZE
-Set the I/O buffer to be SIZE bytes. Units like "MB" and "GB" may immediately follow the number without spaces (e.g. 8MB). The default bufsize is 4MB.
+--bufsize SIZE : Set the I/O buffer to be SIZE bytes. Units like "MB" and "GB" may immediately follow the number without spaces (e.g. 8MB). The default bufsize is 4MB.
 
---chunksize SIZE
-Multiple processes copy a large file in parallel by dividing it into chunks. Set chunk to be at minimum SIZE bytes. Units like "MB" and "GB" can immediately follow the number without spaces (e.g. 64MB). The default chunksize is 4MB.
+--chunksize SIZE : Multiple processes copy a large file in parallel by dividing it into chunks. Set chunk to be at minimum SIZE bytes. Units like "MB" and "GB" can immediately follow the number without spaces (e.g. 64MB). The default chunksize is 4MB.
   
   Parameters to consider while deciding chunk space:
    - Number of cores available
    - Memory available per core
  
- *To get the advantage of parallelization, you need the number of chunks to at least equal the number of worker cores available. Otherwise, some workers will stay idle.
+ *To get the advantage of parallelization, you need the number of chunks to at least equal the number of worker cores available (or better, the number of worker cores times 2). Otherwise, some workers will stay idle.*
 
 ```
 dsync.sbatch - Sync the source and destination file system.
