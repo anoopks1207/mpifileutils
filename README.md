@@ -76,7 +76,13 @@ dsync.sbatch - Sync the source and destination file system.
 For large directory trees, the --batch-files option offers a type of checkpoint.
 It moves files in batches, and if interrupted, a restart picks up from the last completed batch.:
 
+Parameters to consider while deciding batch size:
 
+- Number of cores available
+- Batch allocation per core
+
+ *To get the advantage of parallelization, you need the number of batches to at least equal the number of worker cores available (or better, the number of worker cores times 2). Otherwise, some workers will stay idle.*
+ 
 **For detailed documentation, please refer** [ https://mpifileutils.readthedocs.io/en/v0.11.1/index.html ]
 
 ## KNOWN BUGS
