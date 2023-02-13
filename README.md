@@ -11,7 +11,7 @@ The mpiFileUtils suite solves this problem by offering MPI-based tools for basic
 ![image](https://user-images.githubusercontent.com/42033222/218493535-30cc0490-896a-48cc-87c6-6fa8bc800399.png)
 
 
-**File size: Approximately 4 kilobytes
+*File size: Approximately 4 kilobytes*
 
 
 ## Utilities
