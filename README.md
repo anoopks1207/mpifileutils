@@ -6,7 +6,7 @@ High-performance computing users generate large datasets using parallel applicat
 
 The mpiFileUtils suite solves this problem by offering MPI-based tools for basic tasks like copy, remove, and compare for such datasets, delivering orders of magnitude in performance speedup over their single-process counterparts. Furthermore, the libmfu library packages common functionality to simplify the creation of new tools, and it can even be invoked directly from within HPC applications.
 
-##1 Million File Experiment
+## 1 Million File Experiment
 
 ![image](https://user-images.githubusercontent.com/42033222/218493535-30cc0490-896a-48cc-87c6-6fa8bc800399.png)
 
