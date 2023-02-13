@@ -8,7 +8,7 @@ The mpiFileUtils suite solves this problem by offering MPI-based tools for basic
 
 ## Utilities
 
-The tools in mpiFileUtils are MPI applications. They must be launched as MPI applications, e.g., within a compute allocation on a cluster using mpirun. The tools do not currently checkpoint, so one must be careful that an invocation of the tool has sufficient time to complete before it is killed.
+The tools in mpiFileUtils are MPI applications. They must be launched as MPI applications, e.g., within a compute allocation on a cluster using mpirun. The tools except dsync with --batch-files do not currently checkpoint, so one must be careful that an invocation of the tool has sufficient time to complete before it is killed.
 
 dbcast - Broadcast a file to each compute node.
 
@@ -42,9 +42,11 @@ Run **install.sh** with out any arguments. This will compile and install mpifile
 
 ### Following sbatch samples can be used as a reference to trigger job runs from slurm.
 
+
 ```
 dwalk.sbatch - Scan the source file system and dump output to a file.
 ```
+
   The default file format is a binary file intended for use in other tools, not humans, but one can ask for a text-based output:
 
   **dwalk --text --output list.txt /path/to/walk**
@@ -53,11 +55,13 @@ dwalk.sbatch - Scan the source file system and dump output to a file.
 
   **dwalk --output list.mfu /path/to/walk
   dwalk --input list.mfu --text --output list.txt**
+  
 
 ```
 dcp.sbatch - Copy all files/folder to another file system.
 
 ```
+
 --bufsize SIZE : Set the I/O buffer to be SIZE bytes. Units like "MB" and "GB" may immediately follow the number without spaces (e.g. 8MB). The default bufsize is 4MB.
 
 --chunksize SIZE : Multiple processes copy a large file in parallel by dividing it into chunks. Set chunk to be at minimum SIZE bytes. Units like "MB" and "GB" can immediately follow the number without spaces (e.g. 64MB). The default chunksize is 4MB.
@@ -67,14 +71,15 @@ dcp.sbatch - Copy all files/folder to another file system.
    - Memory available per core
  
  *To get the advantage of parallelization, you need the number of chunks to at least equal the number of worker cores available (or better, the number of worker cores times 2). Otherwise, some workers will stay idle.*
+ 
 
 ```
 dsync.sbatch - Sync the source and destination file system.
 ```
 
   dsync makes DEST match SRC, adding missing entries from DEST, and updating existing entries in DEST as necessary so that SRC and DEST have identical content, ownership, time-stamps, and permissions.
-For large directory trees, the --batch-files option offers a type of checkpoint.
-It moves files in batches, and if interrupted, a restart picks up from the last completed batch.:
+  
+For large directory trees, the --batch-files option offers a type of checkpoint. It moves files in batches, and if interrupted, a restart picks up from the last completed batch.:
 
 Parameters to consider while deciding batch size:
 
