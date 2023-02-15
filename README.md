@@ -81,7 +81,7 @@ dcp.sbatch - Copy all files/folder to another file system.
 
 --chunksize SIZE : Multiple processes copy a large file in parallel by dividing it into chunks. Set chunk to be at minimum SIZE bytes. Units like "MB" and "GB" can immediately follow the number without spaces (e.g. 64MB). The default chunksize is 4MB.
   
-  Parameters to consider while deciding chunk space:
+  **Parameters to consider while deciding chunk space:**
    - Number of cores available
    - Memory available per core
  
@@ -96,7 +96,7 @@ dsync.sbatch - Sync the source and destination file system.
   
 For large directory trees, the --batch-files option offers a type of checkpoint. It moves files in batches, and if interrupted, a restart picks up from the last completed batch.:
 
-Parameters to consider while deciding batch size:
+**Parameters to consider while deciding batch size:**
 
 - Number of cores available
 - Batch allocation per core
