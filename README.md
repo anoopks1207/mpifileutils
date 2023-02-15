@@ -48,6 +48,14 @@ dwalk - List, sort, and profile files.
 
 Run **install.sh** with out any arguments. This will compile and install mpifileutils with all required dependencies.
 
+### Dependencies
+
+- libcircle
+- lwgrp
+- dtcmp
+- libarchive
+- CMake
+
 ### Following sbatch samples can be used as a reference to trigger job runs from slurm.
 
 
