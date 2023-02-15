@@ -1,6 +1,6 @@
 #!/bin/sh
-#SBATCH -n 2
-#SBATCH --ntasks-per-node 36
+#SBATCH -n 36
+#SBATCH --ntasks-per-node 18
 #SBATCH --exclusive
 #SBATCH --job-name dsync
 
@@ -19,4 +19,4 @@ sed -i "s/$/:${SLURM_NTASKS_PER_NODE}/" $MACHINEFILE
 
 cat $MACHINEFILE
 # Run using generated Machine file:
-dsync --batch-files 10000 /source/to/sync /dest/to/sync
+mpirun dsync --batch-files 10000 /source/to/sync /dest/to/sync
