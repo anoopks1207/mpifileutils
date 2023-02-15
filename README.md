@@ -56,7 +56,7 @@ Run **install.sh** with out any arguments. This will compile and install mpifile
 - libarchive
 - CMake
 
-### Following sbatch samples can be used as a reference to trigger job runs from slurm.
+### Following sbatch samples can be used as a reference to submit slurm jobs.
 
 
 ```
